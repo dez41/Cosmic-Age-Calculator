@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Age Calculator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="stars" id="stars"></div>
+  
+  <div class="theme-toggle" id="themeToggle">
+    <span class="toggle-icon">🌓</span>
+  </div>
+  
+  <div class="container">
+    <div class="calculator-card">
+      <div class="header">
+        <h1>Cosmic Age Calculator</h1>
+        <p>Discover your place in the universe</p>
+      </div>
+
+      <form id="ageForm">
+        <div class="input-group">
+          <label for="birthdate">Enter your birthdate:</label>
+          <input type="date" id="birthdate" required>
+        </div>
+        <button type="submit" class="calculate-btn">
+          <span>Calculate My Cosmic Age</span>
+          <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
+          </svg>
+        </button>
+      </form>
+
+      <div class="results-section">
+        <div id="result" class="result-container">
+          <div class="result-placeholder">
+            <svg viewBox="0 0 24 24" width="48" height="48">
+              <path fill="#4cc9f0" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M7,7H9V9H7V7M7,11H9V13H7V11M7,15H9V17H7V15M17,17H11V15H17V17M17,13H11V11H17V13M17,9H11V7H17V9Z"/>
+            </svg>
+            <p>Your cosmic age profile will appear here</p>
+          </div>
+        </div>
+
+        <div class="additional-info">
+          <div class="info-card" id="zodiacInfo">
+            <h3>Cosmic Signs</h3>
+            <div class="zodiac-content">
+              <div class="sign-group">
+                <div class="sign-title">Western:</div>
+                <div class="sign-value">-</div>
+              </div>
+              <div class="sign-group">
+                <div class="sign-title">Chinese:</div>
+                <div class="sign-value">-</div>
+              </div>
+              <div class="sign-group">
+                <div class="sign-title">Birthstone:</div>
+                <div class="sign-value">-</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="info-card" id="nextBirthday">
+            <h3>Next Birthday</h3>
+            <div class="countdown-content">-</div>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <canvas id="ageChart"></canvas>
+        </div>
+      </div>
+
+      <div class="share-section" id="shareSection">
+        <button class="share-btn" id="shareBtn">Share Cosmic Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
